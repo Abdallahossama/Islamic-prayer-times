@@ -1,0 +1,104 @@
+/* Start Variables */
+:root {
+  --background-color: #45aaf3;
+  --prayer_name_backgroundcolor: #3fd9ff;
+}
+/* End Variables */
+/* Start Global Rules */
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Tajawal";
+  background-color: var(--background-color);
+  color: white;
+  font-weight: bold;
+}
+/* End Golbal Rules */
+/* Start Components */
+.main {
+  padding: 30px 15px;
+}
+hr {
+  border: 2px solid white;
+}
+/* End Components */
+/* Start info */
+.info #location {
+  font-weight: 600;
+  font-size: 90px;
+}
+@media (min-width: 768px) {
+  .info {
+    margin-top: 150px;
+  }
+}
+.info #location {
+  font-size: 90px;
+}
+.info .time_info {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  font-weight: 800;
+}
+.info #day {
+  font-size: 18px;
+  display: inline;
+  margin-left: 10px;
+}
+.info #date {
+  font-size: 18px;
+}
+/* End info */
+/* Start prayers */
+.prayer {
+  margin: 20px 0px;
+  color: white;
+}
+.prayer h3 {
+  background-color: var(--prayer_name_backgroundcolor);
+  margin: 0px;
+  padding: 10px 10px;
+}
+.prayer h2 {
+  padding: 20px 5px;
+  background-color: #00c2988c;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .prayer h2 {
+    padding: 60px 80px;
+  }
+}
+@media (max-width: 768px) {
+  .prayer h3 {
+    text-align: center;
+  }
+}
+/* End prayers */
+/* Start location-selector */
+.location-selector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+.location-selector select {
+  width: 200px;
+  border-radius: 5px;
+}
+@media (min-width: 768px) {
+  .location-selector {
+    margin-top: 50px;
+  }
+}
+/* End location-selector */
