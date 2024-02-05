@@ -1,3 +1,4 @@
+const axios = require('axios/dist/browser/axios.cjs'); // browser
 const axios = require('axios/dist/node/axios.cjs'); // node
 
 let list = ["القاهره", "الاسكندريه", "new jersey city", "مكة المكرمة"];
