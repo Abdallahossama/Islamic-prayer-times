@@ -1,6 +1,3 @@
-const axios = require('axios/dist/browser/axios.cjs'); // browser
-const axios = require('axios/dist/node/axios.cjs'); // node
-
 let list = ["القاهره", "الاسكندريه", "new jersey city", "مكة المكرمة"];
 document.getElementById("cities").innerHTML = ``;
 for (city of list) {
@@ -52,7 +49,8 @@ function getPrayerTimes(location) {
       document.getElementById("Asr").innerHTML = timings.Asr;
       document.getElementById("Maghrib").innerHTML = timings.Maghrib;
       document.getElementById("Isha").innerHTML = timings.Isha;
-      document.getElementById("date").innerHTML =
+      document.getElementById("date"
+).innerHTML =
         response.data.data.date.readable;
       document.getElementById("day").innerHTML =response.data.data.date.hijri.weekday.ar;
       document.getElementById("location").innerHTML =document.getElementById("cities").value;
