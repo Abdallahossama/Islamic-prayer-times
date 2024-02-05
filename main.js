@@ -1,3 +1,5 @@
+const axios = require('axios/dist/node/axios.cjs'); // node
+
 let list = ["القاهره", "الاسكندريه", "new jersey city", "مكة المكرمة"];
 document.getElementById("cities").innerHTML = ``;
 for (city of list) {
