@@ -32,15 +32,6 @@ hr {
 .info #location {
   font-weight: 600;
   font-size: 90px;
-  
-}
-@media (max-width: 768px) {
-  .info #location{
-    font-size: 30px;
-  }
-}
-.info #location {
-  font-size: 90px;
 }
 .info .time_info {
   display: flex;
@@ -55,6 +46,11 @@ hr {
 }
 .info #date {
   font-size: 18px;
+}
+@media (max-width: 768px) {
+  .info #location {
+    font-size: 60px;
+  }
 }
 /* End info */
 /* Start prayers */
