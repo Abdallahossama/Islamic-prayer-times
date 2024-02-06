@@ -32,10 +32,11 @@ hr {
 .info #location {
   font-weight: 600;
   font-size: 90px;
+  
 }
-@media (min-width: 768px) {
-  .info {
-    margin-top: 150px;
+@media (max-width: 768px) {
+  .info #location{
+    font-size: 30px;
   }
 }
 .info #location {
