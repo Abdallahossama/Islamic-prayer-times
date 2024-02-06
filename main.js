@@ -39,23 +39,25 @@ document.getElementById("cities").addEventListener("change", () => {
   }
 });
 
-// Fetch request to get prayer times
+// axios get request to get prayer times
 function getPrayerTimes(location) {
-  fetch(location)
+  location = location.replace("http:", "https:");
+  axios
+    .get(location)
     .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
-      const timings = data.data.timings;
+      const timings = response.data.data.timings;
       document.getElementById("Fajr").innerHTML = timings.Fajr;
       document.getElementById("Sunrise").innerHTML = timings.Sunrise;
       document.getElementById("Dhuhr").innerHTML = timings.Dhuhr;
       document.getElementById("Asr").innerHTML = timings.Asr;
       document.getElementById("Maghrib").innerHTML = timings.Maghrib;
       document.getElementById("Isha").innerHTML = timings.Isha;
-      document.getElementById("date").innerHTML = data.data.date.readable;
-      document.getElementById("day").innerHTML = data.data.date.hijri.weekday.ar;
-      document.getElementById("location").innerHTML = document.getElementById("cities").value;
+      document.getElementById("date").innerHTML =
+        response.data.data.date.readable;
+      document.getElementById("day").innerHTML =
+        response.data.data.date.hijri.weekday.ar;
+      document.getElementById("location").innerHTML =
+        document.getElementById("cities").value;
       let x = {
         city: document.getElementById("cities").value,
         link: location,
